@@ -24,8 +24,6 @@ with st.expander("How to use"):
 # Sidebar quick-fill (mean values)
 st.sidebar.header("Quick Fill")
 if st.sidebar.button("Use mean feature values"):
-    # Use training-set means (approximate via model's training data? Not stored; so zeros default)
-    # Provide safe default zero; users can adjust. Alternatively let users upload CSV.
     st.session_state["inputs"] = {f: 0.0 for f in feature_names}
 
 st.header("Inputs")
